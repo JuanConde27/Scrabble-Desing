@@ -1,0 +1,307 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-style: italic;
+}
+
+.container_logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container_preguntas {
+    padding-top: 100px;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(150deg, #118686,  #1c0974, #137c66);
+    background-size: 400% 300%;
+    animation: BgGradient 5s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@keyframes BgGradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.container-faq {
+    max-width: 65%;
+    margin: 0 auto;
+    box-shadow: 0 0 15px -1px rgba(0, 0, 0, .1);
+    padding: 10px;
+}
+
+.container-faq .title-faq {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white
+}
+
+.container-faq .item-faq {
+    box-shadow: 0 0 15px -1px rgba(0, 0, 0, .2);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.container-faq .item-faq:last-of-type{
+    margin-bottom: 0;
+}
+
+.container-faq .item-faq .question {
+    position: relative;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(228, 228, 235, 0.2);
+    padding: 20px 20px 20px 80px;
+    transition: .4s;
+}
+
+.container-faq .item-faq .question .more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px -1px rgba(0, 0, 0, .2);
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.container-faq .item-faq .question .more:hover {
+    box-shadow: 0 0 15px -1px rgba(0, 0, 0, .4);
+}
+
+.container-faq .item-faq .question span {
+    position: absolute;
+    left: 10px;
+    font-size: 3rem;
+    top: 10px;
+    opacity: .1;
+}
+
+.container-faq .item-faq .answer {
+    position: relative;
+    padding: 0 20px 0 80px;
+    overflow: hidden;
+    height: 0;
+    transition: .4s;
+}
+
+.container-faq .item-faq .answer p {
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+}
+
+.container-faq .item-faq .answer span {
+    position: absolute;
+    left: 10px;
+    font-size: 3rem;
+    top: -10px;
+    opacity: .2;
+}
+
+.capa {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+/*Estilos para el encabezado*/
+.header {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container .btn-menu,
+.logo {
+    float: left;
+    line-height: 100px;
+}
+
+.container .btn-menu label {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.logo h1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+.container .menu {
+    float: right;
+    line-height: 100px;
+}
+
+.container .menu a {
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+    font-style: italic;
+}
+
+.container .menu a:hover {
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+}
+
+/*Fin de Estilos para el encabezado*/
+
+/*Menù lateral*/
+#btn-menu {
+    display: none;
+}
+
+.container-menu {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+    font-style: italic;
+    z-index: 99;
+}
+
+#btn-menu:checked~.container-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont-menu {
+    width: 100%;
+    max-width: 250px;
+    background: rgba(0, 0, 0, 0.685);
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+
+#btn-menu:checked~.container-menu .cont-menu {
+    transform: translateX(0%);
+}
+
+.cont-menu nav {
+    transform: translateY(15%);
+}
+
+.cont-menu nav a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover {
+    border-left: 5px solid #c7c7c7;
+    background: rgba(128, 128, 128, 0.116);
+}
+
+.cont-menu label {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/*Fin de Menù lateral*/
+
+
+.main {
+    height: calc(100vh - 100px);
+    padding-top: 100px;
+    width: 100%;
+    background-image: url(../images/398945.jpg);
+    background-position: center;
+    background-size: cover;
+    
+    overflow: scroll;
+}
+
+.main__content{
+    max-width: 75rem;
+    /* margin: 8rem auto; */
+}
+
+.main__content p{
+    max-width: 50rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2rem;
+   
+}
+
+.card{
+    background: #fff;
+    display: inline-block;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.card__title{
+    background-color: rgba(173, 173, 173, 0.521);
+    height: 4rem;
+    width: 4rem;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.main__section{
+    margin-top: 3rem;
+}
+
+.main__section h3{
+    font-size: 2rem;
+    text-align: center;
+}

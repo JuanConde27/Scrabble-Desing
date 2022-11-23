@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- ALGUNAS CLASES MANEJADAS EN INGLES Y TEXTO EN ESPAÑOL -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="../styles/sesion.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section class="main">
+
+      <div class="main__contact">
+        <h2 class="main__title">Scrabble</h2>
+        <p class="main__paragraph">¡Bienvenido inicia sesión para jugar!</p>
+
+        <form class="main__form" id="form-login">
+          <input
+            type="text"
+            placeholder="E-mail"
+            class="main__input"
+            id="username"
+          />
+
+          <input type="password" placeholder="Contraseña" class="main__input" id="password" />
+
+          <button class="main__input main__input--send" type="submit">
+            Iniciar Sesión
+          </button>
+        </form>
+
+        <a href="./registro.html" class="registrate">¿No tienes una cuenta?<br>Regístrate</a>
+
+        <p class="main__paragraph">O continuar con</p>
+
+        <article class="main__social">
+
+          <!-- BOTONES EN PROGRESO - BOTONES EN MODO PRUEBA -->
+
+          <!-- SI MANDA EL ERROR (INTENTO FALLIDO) VUELVA A PRESIONAR EL BOTON -->
+
+          <button type="button" id="btn-google" class="main__link">
+            <img src="../images/google-icon.svg" class="main__icon" />
+          </button>
+
+          <button type="button" id="btn-github" class="main__link">
+            <img src="../images/github.svg" class="main__icon" />
+          </button>
+
+          <button type="button" id="btn-facebook" class="main__link">
+            <img src="../images/facebook.svg" class="main__icon" />
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <script type="module" src="../scripts/firebase.js"></script>
+    <script type="module" src="../scripts/login.js"></script>
+    <script type="module" src="../scripts/login_redes.js"></script>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-style: italic;
+  height: 100vh;
+  background: linear-gradient(150deg, #118686, #1c0974, #137c66);
+  background-size: 400% 300%;
+  animation: BgGradient 5s ease infinite;
+}
+
+@keyframes BgGradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/*Estilos para el encabezado*/
+.header {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.container .btn-menu,
+.logo {
+  float: left;
+  line-height: 100px;
+}
+
+.container .btn-menu label {
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.logo h1 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 22px;
+  margin-left: 10px;
+  font-style: italic;
+  margin-top: 0;
+}
+
+.container .menu {
+  float: right;
+  line-height: 100px;
+}
+
+.container .menu a {
+  display: inline-block;
+  padding: 15px;
+  line-height: normal;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  font-size: 15px;
+  margin-right: 5px;
+  font-style: italic;
+}
+
+.container .menu a:hover {
+  border-bottom: 2px solid #c7c7c7;
+  padding-bottom: 5px;
+}
+
+/*Fin de Estilos para el encabezado*/
+
+/*Menù lateral*/
+#btn-menu {
+  display: none;
+}
+
+.container-menu {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+  font-style: italic;
+  z-index: 99;
+}
+
+#btn-menu:checked ~ .container-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cont-menu {
+  width: 100%;
+  max-width: 250px;
+  background: rgba(0, 0, 0, 0.685);
+  height: 100vh;
+  position: relative;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu {
+  transform: translateX(0%);
+}
+
+.cont-menu nav {
+  transform: translateY(15%);
+}
+
+.cont-menu nav a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #c7c7c7;
+  border-left: 5px solid transparent;
+  transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover {
+  border-left: 5px solid #c7c7c7;
+  background: rgba(128, 128, 128, 0.116);
+}
+
+.cont-menu label {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.main {
+  height: 87vh;
+  padding-top: 100px;
+  width: 100%;
+  background: linear-gradient(150deg, #118686, #1c0974, #137c66);
+  background-size: 400% 300%;
+  animation: BgGradient 5s ease infinite;
+  background-repeat: no-repeat;
+}
+
+@keyframes BgGradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.main__content {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.main__content p {
+  max-width: 50rem;
+  font-size: 20px;
+  color: white;
+}
+
+.main__content h1 {
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.438);
+  display: inline-block;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.card-img img{
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+}
+
+.main__section {
+  margin-top: 3rem;
+  color: white;
+}
+
+.main__section h3 {
+  font-size: 2rem;
+  text-align: center;
+}
